@@ -81,5 +81,14 @@ const evenPricedDrinks = coffeeMenu.filter(drink => drink.price % 2 === 0);
 console.log(evenPricedDrinks);
 
 
+//Print the total if you were to order one of every drink
+const totalPrice = coffeeMenu.reduce((total, drink) => {
+    return total + drink.price;
+}, 0);
+
+console.log(totalPrice);
+
+
+
 
 
