@@ -58,7 +58,7 @@ const coffeeMenu = [
     }
 ];
 
-//Connect the coffee_data.js file to the index.js file.
+//Connect the coffee_data.js file to the index.js file
 module.exports = coffeeMenu
 
 //Console.table Coffee Menu to check
@@ -91,7 +91,13 @@ console.log(totalPrice);
 const seasonalDrinks = coffeeMenu.filter(drink => drink.seasonal).map(drink => drink.name);
 console.log(seasonalDrinks);
 
+//Print all the seasonal drinks with the words "with imported beans" after the item name
+  //For example: "affogato with imported beans"
+const importedBeans = coffeeMenu.filter(drink => drink.seasonal);
 
+importedBeans.forEach(drink => {
+    console.log(drink.name + " with imported beans!");
+});
 
 
 
