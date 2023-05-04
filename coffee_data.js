@@ -7,7 +7,7 @@
 // Checklist:
 // a. All prices should be numbers.
 // b. All items should be strings.
-// c. Objects and properties should have commas seperating them.
+// c. Objects and properties should have commas separating them.
 // d. Connect the coffee_data.js file to the index.js file.
 
 const coffeeMenu = [
@@ -80,13 +80,17 @@ console.log(drinkNameAndPrices);
 const evenPricedDrinks = coffeeMenu.filter(drink => drink.price % 2 === 0);
 console.log(evenPricedDrinks);
 
-
 //Print the total if you were to order one of every drink
 const totalPrice = coffeeMenu.reduce((total, drink) => {
     return total + drink.price;
 }, 0);
 
 console.log(totalPrice);
+
+// Print an array with all the drinks that are seasonal
+const seasonalDrinks = coffeeMenu.filter(drink => drink.seasonal).map(drink => drink.name);
+console.log(seasonalDrinks);
+
 
 
 
